@@ -26,3 +26,26 @@ MEMORY
   RAM    (xrw)    : ORIGIN = 0x20000000,   LENGTH = 20K
   FLASH    (rx)    : ORIGIN = 0x08010000,   LENGTH = 16K /*22K*/
 }
+
+
+/* Bootloader */
+MEMORY
+{
+  RAM    (xrw)    : ORIGIN = 0x20000000, LENGTH = 20K
+  FLASH  (rx)     : ORIGIN = 0x08000000, LENGTH = 12K
+}
+
+/* Application 1 */
+MEMORY
+{
+  RAM    (xrw)    : ORIGIN = 0x20000000, LENGTH = 20K
+  FLASH  (rx)     : ORIGIN = 0x08008000, LENGTH = 16K
+}
+
+/* Application 2 */
+MEMORY
+{
+  RAM    (xrw)    : ORIGIN = 0x20000000, LENGTH = 20K
+  FLASH  (rx)     : ORIGIN = 0x08010000, LENGTH = 16K
+}
+
