@@ -1,26 +1,33 @@
-# Bootloader_STM32
+# Bootloader_STM32F407
 
-This bootloader example can jump to 2 different applications.
+This project demonstrates a simple STM32F407 bootloader that validates and jumps to an application located at a different flash address.
 
-The controller use is STM32F407 
-The FLASH memory  is splitted into multiple partitions.
+---
 
-Bootloader
+## Overview
+- **MCU:** STM32F407
+- **Bootloader address:** `0x08000000`
+- **Application address:** `0x08008000`
+- **Function:** Bootloader checks if the application is valid by reading its vector table (MSP and Reset_Handler) and, if valid, jumps to it after disabling peripherals and interrupts.
+
+---
+
+## Memory Layout
+
+### Bootloader Linker Script
 ```ld
 MEMORY
 {
-  RAM   (xrw) : ORIGIN = 0x20000000, LENGTH = 20K
-  FLASH (rx)  : ORIGIN = 0x08000000, LENGTH = 12K
+  RAM   (xrw) : ORIGIN = 0x20000000, LENGTH = 128K
+  FLASH (rx)  : ORIGIN = 0x08000000, LENGTH = 32K
 }
 ```
-Application 
+### Application Linker Script
 ```ld
 
 MEMORY
 {
-  RAM    (xrw)    : ORIGIN = 0x20000000, LENGTH = 20K
-  FLASH  (rx)     : ORIGIN = 0x08008000, LENGTH = 16K
+  RAM   (xrw) : ORIGIN = 0x20000000, LENGTH = 128K
+  FLASH (rx)  : ORIGIN = 0x08008000, LENGTH = 960K
 }
 ```
-
-
