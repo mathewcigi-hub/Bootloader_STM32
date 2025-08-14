@@ -1,0 +1,10 @@
+../Core/Src/main.c:12:6:MX_GPIO_Init	32	static
+../Core/Src/main.c:31:13:delay_ms	24	static,ignoring_inline_asm
+../Core/Src/main.c:36:13:boot_led_toggle	8	static
+../Core/Src/main.c:37:13:app_led_toggle	8	static
+../Core/Src/main.c:40:13:leds_off	8	static
+../Core/Src/main.c:44:16:application_is_valid	24	static
+../Core/Src/main.c:54:13:jump_to_application	40	static,ignoring_inline_asm
+../Core/Src/main.c:88:5:main	16	static
+../Core/Src/main.c:119:6:SystemClock_Config	88	static
+../Core/Src/main.c:173:6:Error_Handler	4	static,ignoring_inline_asm

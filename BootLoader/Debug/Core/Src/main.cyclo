@@ -1,0 +1,10 @@
+../Core/Src/main.c:12:6:MX_GPIO_Init	1
+../Core/Src/main.c:31:13:delay_ms	2
+../Core/Src/main.c:36:13:boot_led_toggle	1
+../Core/Src/main.c:37:13:app_led_toggle	1
+../Core/Src/main.c:40:13:leds_off	1
+../Core/Src/main.c:44:16:application_is_valid	6
+../Core/Src/main.c:54:13:jump_to_application	2
+../Core/Src/main.c:88:5:main	4
+../Core/Src/main.c:119:6:SystemClock_Config	3
+../Core/Src/main.c:173:6:Error_Handler	1
